@@ -41,9 +41,13 @@ public class MessageConstants {
 	public static final String ERROR_CONTROLLER_INVALID_PROCESSED_DIRECTORY = "Invalid processed directory";
 	public static final String ERROR_CONTROLLER_INVALID_ERROR_DIRECTORY = "Invalid error directory";
 	public static final String ERROR_CONTROLLER_INVENTORY_CREATION = "Inventory creation failed";
+	public static final String ERROR_FILE_PROCESSED = "Failed to process {} file(s)";
+	public static final String ERROR_NO_FILES_PROCESSED = "All files failed to process";
 	
 	//2.Success
-	public static final String FILE_PROCESSED_SUCCESSFULLY = "Processed file(s) successfully: {}";
+	public static final String ALL_FILE_PROCESSED_SUCCESSFULLY = "All file(s) processed successfully";
+	public static final String FILE_PROCESSED_SUCCESSFULLY = "Successfully processed {} file(s)";
+	public static final String FILE_PARTIAL_PROCESSED_SUCCESSFULLY_AND_PARTIAL_FAILED =  "%s file(s) processed succesfully and %s file(s) processing failed.";
 	
 	
 	

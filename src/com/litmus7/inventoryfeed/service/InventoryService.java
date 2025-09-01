@@ -25,11 +25,13 @@ public class InventoryService {
 	
 	private final static Logger logger = LogManager.getLogger(InventoryService.class);
 	
-	public int createInventory(String inputDirectoryPath,String processedDirectoryPath,String errorDirectoryPath) throws InventoryServiceException {
+	public List<Integer> createInventory(String inputDirectoryPath,String processedDirectoryPath,String errorDirectoryPath) throws InventoryServiceException {
 		
 		logger.trace("Entering createInventory()");
 		
 		List<Path> csvFiles = new ArrayList<>();
+		
+		int totalNumberOfFilesToProcess = csvFiles.size();
 		
 		try {
 			csvFiles = findCsvFiles(inputDirectoryPath);
@@ -38,7 +40,7 @@ public class InventoryService {
 			throw new InventoryServiceException(MessageConstants.ERROR_SERVICE_INPUT_DIRECTORY_READ, e, MessageConstants.ERROR_CODE_SERVICE_INPUT_DIRECTORY_READ);
 		}
 		
-		int successfulInventoriesCreation = 0;
+		int successfulFilesProcessed = 0;
 		         
 		for (Path file : csvFiles) {  
 			
@@ -59,7 +61,7 @@ public class InventoryService {
 				}
 				
 				if (flag) {
-					successfulInventoriesCreation+=1;
+					successfulFilesProcessed+=1;
 					
 					logger.info("Inventory created successfully for file: {}",file.getFileName());
 					
@@ -94,13 +96,17 @@ public class InventoryService {
 			
 		}
 		
-		if (successfulInventoriesCreation>0) 
-			logger.info("Inventory creation successful for {} file(s)", successfulInventoriesCreation);
-		else
+		if (totalNumberOfFilesToProcess==successfulFilesProcessed) 
+			logger.info("Inventory creation successful for all {} file(s)", successfulFilesProcessed);
+		else if (totalNumberOfFilesToProcess>successfulFilesProcessed) {
+			logger.info("Inventory creation success for {} files",successfulFilesProcessed);
+			logger.warn("Inventory creation failed for {} file(s)",totalNumberOfFilesToProcess-successfulFilesProcessed);;
+		}
+		else if (successfulFilesProcessed==0)
 			logger.warn("Inventory creation completely failed");
 		
 		logger.trace("Exiting createInventory()");
-		return successfulInventoriesCreation;
+		return List.of(totalNumberOfFilesToProcess,successfulFilesProcessed);
 	}
 	
 	

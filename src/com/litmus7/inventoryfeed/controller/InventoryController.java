@@ -2,6 +2,8 @@ package com.litmus7.inventoryfeed.controller;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -35,27 +37,36 @@ public class InventoryController {
 			return new Response<>(false,MessageConstants.ERROR_CONTROLLER_INVALID_ERROR_DIRECTORY);
 		}
 		
-		int processedCount=0;
+		int successfulFilesProcessedCount=0;
+		int totalFilesCount=0;
+		List<Integer> fileProcessedCount = new ArrayList<>();
 		
 		try {
-			processedCount = inventoryService.createInventory(inputDirectoryPath, processedDirectoryPath, errorDirectoryPath);
+			fileProcessedCount = inventoryService.createInventory(inputDirectoryPath, processedDirectoryPath, errorDirectoryPath);
 		} catch (InventoryServiceException e) {
-			logger.error("Messages: {}",ErrorMessageUtil.getMessage(e.getErrorCode()));
+			logger.error("Message: {}",ErrorMessageUtil.getMessage(e.getErrorCode()));
 			return new Response<>(false,ErrorMessageUtil.getMessage(e.getErrorCode()));
 		} catch (Exception e) {
-			logger.error("Messages: {}",MessageConstants.ERROR_MESSAGE);
-			e.printStackTrace();
+			logger.error("Message: {}",MessageConstants.ERROR_MESSAGE);
 			return new Response<>(false,MessageConstants.ERROR_MESSAGE);
 		}
 		
+		totalFilesCount = fileProcessedCount.get(0);
+		successfulFilesProcessedCount = fileProcessedCount.get(1);
 		
-		
-		if (processedCount>0) {
-			logger.info(MessageConstants.FILE_PROCESSED_SUCCESSFULLY, processedCount);
-			return new Response<>(true,"Processed file(s) successfully: " + processedCount);
+		if (totalFilesCount == successfulFilesProcessedCount) {
+			logger.info(MessageConstants.ALL_FILE_PROCESSED_SUCCESSFULLY, successfulFilesProcessedCount);
+			return new Response<>(true,MessageConstants.ALL_FILE_PROCESSED_SUCCESSFULLY);
 		}
-		
-		logger.warn("No files processed");
+		else if (totalFilesCount > successfulFilesProcessedCount) {
+			logger.info(MessageConstants.FILE_PROCESSED_SUCCESSFULLY,successfulFilesProcessedCount);
+			logger.warn(MessageConstants.ERROR_FILE_PROCESSED,totalFilesCount-successfulFilesProcessedCount);
+			return new Response<>(true, String.format(MessageConstants.FILE_PARTIAL_PROCESSED_SUCCESSFULLY_AND_PARTIAL_FAILED,successfulFilesProcessedCount,totalFilesCount-successfulFilesProcessedCount));
+		}
+		else if (successfulFilesProcessedCount==0) {
+			logger.warn("No files processed");
+			return new Response<>(false,MessageConstants.ERROR_NO_FILES_PROCESSED);
+		}
 		
 		logger.trace("Exiting processAllFiles()");
 		
