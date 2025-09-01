@@ -30,7 +30,9 @@ public class MessageConstants {
 	public static final String ERROR_CODE_SERVICE_INPUT_DIRECTORY_READ = "INV_SRV_002";
 	public static final String ERROR_UI_INV_SRV_002 = "Unable to access input files. Please check directory permissions.";
 	
-	
+	public static final String ERROR_NO_CSV_FILES_FOUND_IN_INPUT_DIR  = "No CSV files found in input folder.";
+	public static final String ERROR_CODE_NO_CSV_FILES_FOUND_IN_INPUT_DIR = "INV_SRV_003";
+	public static final String ERROR_UI_INV_SRV_003 = "No CSV files found in input folder.";
 	
 	
 	

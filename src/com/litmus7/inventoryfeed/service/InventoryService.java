@@ -42,6 +42,9 @@ public class InventoryService {
 		try {
 			csvFiles = findCsvFiles(inputDirectoryPath);
 			totalNumberOfFilesToProcess = csvFiles.size();
+			if (csvFiles == null || totalNumberOfFilesToProcess==0) {
+				logger.error("No CSV files found in input folder.");
+				throw new InventoryServiceException(MessageConstants.ERROR_NO_CSV_FILES_FOUND_IN_INPUT_DIR, MessageConstants.ERROR_CODE_NO_CSV_FILES_FOUND_IN_INPUT_DIR);
 		} catch (IOException e) {
 			logger.error("Error reading input directory: {}", e.getMessage());
 			throw new InventoryServiceException(MessageConstants.ERROR_SERVICE_INPUT_DIRECTORY_READ, e, MessageConstants.ERROR_CODE_SERVICE_INPUT_DIRECTORY_READ);

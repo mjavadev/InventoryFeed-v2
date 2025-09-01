@@ -533,3 +533,51 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1
 2025-09-01 17:52:56.055 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:117 - Exiting createInventory()
 2025-09-01 17:52:56.055 [main] WARN  com.litmus7.inventoryfeed.controller.InventoryController:67 - No files processed
 2025-09-01 17:52:56.056 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:68 - Exiting processAllFiles()
+2025-09-01 18:06:08.396 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:25 - Entering processAllFiles()
+2025-09-01 18:06:08.402 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:34 - Entering createInventory()
+2025-09-01 18:06:08.409 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:135 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v2\input\input1.csv
+2025-09-01 18:06:08.410 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:135 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v2\input\input2.csv
+2025-09-01 18:06:08.411 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:135 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v2\input\input3.csv
+2025-09-01 18:06:08.444 [Thread-1] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 201
+2025-09-01 18:06:08.444 [Thread-2] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 301
+2025-09-01 18:06:08.444 [Thread-0] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 101
+2025-09-01 18:06:09.888 [Thread-2] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 301
+2025-09-01 18:06:09.889 [Thread-2] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 301
+2025-09-01 18:06:09.889 [Thread-0] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 101
+2025-09-01 18:06:09.890 [Thread-1] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 201
+2025-09-01 18:06:09.891 [Thread-0] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 101
+2025-09-01 18:06:09.892 [Thread-1] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 201
+2025-09-01 18:06:09.903 [Thread-2] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 302
+2025-09-01 18:06:09.904 [Thread-0] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 102
+2025-09-01 18:06:09.905 [Thread-1] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 202
+2025-09-01 18:06:09.975 [Thread-0] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 102
+2025-09-01 18:06:09.976 [Thread-0] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 102
+2025-09-01 18:06:09.980 [Thread-0] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 103
+2025-09-01 18:06:09.986 [Thread-2] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 302
+2025-09-01 18:06:09.986 [Thread-2] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 302
+2025-09-01 18:06:09.987 [Thread-1] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 202
+2025-09-01 18:06:09.989 [Thread-1] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 202
+2025-09-01 18:06:09.991 [Thread-2] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 303
+2025-09-01 18:06:09.999 [Thread-1] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 203
+2025-09-01 18:06:10.039 [Thread-0] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 103
+2025-09-01 18:06:10.040 [Thread-0] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 103
+2025-09-01 18:06:10.045 [Thread-0] INFO  com.litmus7.inventoryfeed.service.InventoryService:61 - Inventory created successfully for file: input1.csv
+2025-09-01 18:06:10.050 [Thread-2] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 303
+2025-09-01 18:06:10.051 [Thread-0] INFO  com.litmus7.inventoryfeed.service.InventoryService:66 - File moved to processed folder: input1.csv
+2025-09-01 18:06:10.051 [Thread-2] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 303
+2025-09-01 18:06:10.054 [Thread-1] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 203
+2025-09-01 18:06:10.054 [Thread-1] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 203
+2025-09-01 18:06:10.055 [Thread-2] INFO  com.litmus7.inventoryfeed.service.InventoryService:61 - Inventory created successfully for file: input3.csv
+2025-09-01 18:06:10.057 [Thread-2] INFO  com.litmus7.inventoryfeed.service.InventoryService:66 - File moved to processed folder: input3.csv
+2025-09-01 18:06:10.058 [Thread-1] INFO  com.litmus7.inventoryfeed.service.InventoryService:61 - Inventory created successfully for file: input2.csv
+2025-09-01 18:06:10.060 [Thread-1] INFO  com.litmus7.inventoryfeed.service.InventoryService:66 - File moved to processed folder: input2.csv
+2025-09-01 18:06:10.060 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:187 - 
+=== PROCESSING COMPLETE ===
+2025-09-01 18:06:10.061 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:188 - Total files to process: 3
+2025-09-01 18:06:10.061 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:189 - Total threads created: 3
+2025-09-01 18:06:10.062 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:190 - Completed threads: 3
+2025-09-01 18:06:10.062 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:191 - Successfully processed threads: 3
+2025-09-01 18:06:10.063 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:192 - Failed threads: 0
+2025-09-01 18:06:10.064 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:109 - Inventory creation successful for all 3 file(s)
+2025-09-01 18:06:10.064 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:117 - Exiting createInventory()
+2025-09-01 18:06:10.064 [main] INFO  com.litmus7.inventoryfeed.controller.InventoryController:58 - All file(s) processed successfully

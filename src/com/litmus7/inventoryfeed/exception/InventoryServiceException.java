@@ -9,6 +9,11 @@ public class InventoryServiceException extends Exception {
 		this.errorCode = errorCode;
 	}
 
+	public InventoryServiceException(String message, String errorCode) {
+		super(message);
+		this.errorCode = errorCode;
+	}
+	
 	public String getErrorCode() {
 		return errorCode;
 	}

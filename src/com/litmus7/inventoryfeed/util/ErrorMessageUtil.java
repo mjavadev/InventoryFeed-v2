@@ -17,6 +17,7 @@ public class ErrorMessageUtil {
 		
 		ERROR_MESSAGES.put(MessageConstants.ERROR_CODE_SERVICE_CSV_FILE_READ, MessageConstants.ERROR_UI_INV_SRV_001);
 		ERROR_MESSAGES.put(MessageConstants.ERROR_CODE_SERVICE_INPUT_DIRECTORY_READ, MessageConstants.ERROR_UI_INV_SRV_002);
+		ERROR_MESSAGES.put(MessageConstants.ERROR_CODE_NO_CSV_FILES_FOUND_IN_INPUT_DIR, MessageConstants.ERROR_NO_CSV_FILES_FOUND_IN_INPUT_DIR);
 	}
 	
 	public static String getMessage(String errorCode) {
