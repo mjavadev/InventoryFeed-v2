@@ -37,7 +37,7 @@ public class InventoryController {
 			return new Response<>(false,MessageConstants.ERROR_CONTROLLER_INVALID_ERROR_DIRECTORY);
 		}
 		
-		int successfulFilesProcessedCount=0;
+		int successfullyProcessedFilesCount=0;
 		int totalFilesCount=0;
 		List<Integer> fileProcessedCount = new ArrayList<>();
 		
@@ -52,16 +52,16 @@ public class InventoryController {
 		}
 		
 		totalFilesCount = fileProcessedCount.get(0);
-		successfulFilesProcessedCount = fileProcessedCount.get(1);
+		successfullyProcessedFilesCount = fileProcessedCount.get(1);
 		
-		if (totalFilesCount == successfulFilesProcessedCount) {
-			logger.info(MessageConstants.ALL_FILE_PROCESSED_SUCCESSFULLY, successfulFilesProcessedCount);
+		if (totalFilesCount == successfullyProcessedFilesCount && totalFilesCount>0) {
+			logger.info(MessageConstants.ALL_FILE_PROCESSED_SUCCESSFULLY, successfullyProcessedFilesCount);
 			return new Response<>(true,MessageConstants.ALL_FILE_PROCESSED_SUCCESSFULLY);
 		}
-		else if (totalFilesCount > successfulFilesProcessedCount) {
-			logger.info(MessageConstants.FILE_PROCESSED_SUCCESSFULLY,successfulFilesProcessedCount);
-			logger.warn(MessageConstants.ERROR_FILE_PROCESSED,totalFilesCount-successfulFilesProcessedCount);
-			return new Response<>(true, String.format(MessageConstants.FILE_PARTIAL_PROCESSED_SUCCESSFULLY_AND_PARTIAL_FAILED,successfulFilesProcessedCount,totalFilesCount-successfulFilesProcessedCount));
+		else if (totalFilesCount > successfullyProcessedFilesCount && successfullyProcessedFilesCount>0) {
+			logger.info(MessageConstants.FILE_PROCESSED_SUCCESSFULLY,successfullyProcessedFilesCount);
+			logger.warn(MessageConstants.ERROR_FILE_PROCESSED,totalFilesCount-successfullyProcessedFilesCount);
+			return new Response<>(true, String.format(MessageConstants.FILE_PARTIAL_PROCESSED_SUCCESSFULLY_AND_PARTIAL_FAILED,successfullyProcessedFilesCount,totalFilesCount-successfullyProcessedFilesCount));
 		}
 		else {
 			logger.warn("No files processed");

@@ -11,11 +11,11 @@ public class InventoryFeedApp {
 	
 	public static void main(String[] args) {
 		
-		final String inputDirectoryPath = "C:\\Users\\HP\\eclipse-workspace\\InventoryFeed-v1\\input";
+		final String inputDirectoryPath = "C:\\Users\\HP\\eclipse-workspace\\InventoryFeed-v2\\input";
 		
-		final String processedDirectoryPath = "C:\\Users\\HP\\eclipse-workspace\\InventoryFeed-v1\\processed";
+		final String processedDirectoryPath = "C:\\Users\\HP\\eclipse-workspace\\InventoryFeed-v2\\processed";
 		
-		final String errorDirectoryPath = "C:\\Users\\HP\\eclipse-workspace\\InventoryFeed-v1\\error";
+		final String errorDirectoryPath = "C:\\Users\\HP\\eclipse-workspace\\InventoryFeed-v2\\error";
 		
 		try (Scanner scanner = new Scanner(System.in)) {
 			

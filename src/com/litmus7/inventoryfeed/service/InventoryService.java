@@ -9,6 +9,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,9 +26,14 @@ public class InventoryService {
 	
 	private final static Logger logger = LogManager.getLogger(InventoryService.class);
 	
+	private static final AtomicInteger successCount = new AtomicInteger(0);
+	private static final AtomicInteger failureCount = new AtomicInteger(0);
+	private static final AtomicInteger completedCount = new AtomicInteger(0);
+	
 	public List<Integer> createInventory(String inputDirectoryPath,String processedDirectoryPath,String errorDirectoryPath) throws InventoryServiceException {
-		
 		logger.trace("Entering createInventory()");
+		
+		List<Thread> threads = new ArrayList<>();
 		
 		List<Path> csvFiles = new ArrayList<>();
 		
@@ -41,73 +47,75 @@ public class InventoryService {
 			throw new InventoryServiceException(MessageConstants.ERROR_SERVICE_INPUT_DIRECTORY_READ, e, MessageConstants.ERROR_CODE_SERVICE_INPUT_DIRECTORY_READ);
 		}
 		
-		int successfulFilesProcessed = 0;
-		         
-		for (Path file : csvFiles) {  
+		for (Path file: csvFiles) {
 			
-			boolean flag = true;
-			
-			try {
-				
-				List<Inventory> inventories =  readCsvFile(file);  
-				
-				for (Inventory inventory : inventories) { 
-					try {
-						int inventoriesAdded = inventoryDAO.saveInventory(inventory);
-					} catch (InventoryDAOException e) {
-						logger.error("Error code: {} Message: {}",e.getErrorCode(),MessageConstants.ERROR_SERVICE_SAVE_INVENTORY,e);
-						flag = false;
-						break; 
+			Runnable runnable = () -> {
+				try {
+					
+					List<Inventory> inventories =  readCsvFile(file);
+					
+					for (Inventory inventory : inventories) { 
+							int inventoriesAdded = inventoryDAO.saveInventory(inventory);
 					}
-				}
-				
-				if (flag) {
-					successfulFilesProcessed+=1;
 					
 					logger.info("Inventory created successfully for file: {}",file.getFileName());
 					
 					try {
-						Files.move(file, 
-								Paths.get(processedDirectoryPath).resolve(file.getFileName()),
-								StandardCopyOption.REPLACE_EXISTING);
+						moveFile(file, processedDirectoryPath);
+						successCount.incrementAndGet();
 						logger.info("File moved to processed folder: {}", file.getFileName());
 					} catch (IOException e) {
 						logger.error("Failed to move file to processed folder: {}",file.getFileName());
 					}
 					
-				}
-				else {
-					logger.error("Inventory creation failed for file: {}",file.getFileName());
+				}catch (IOException e) {
+					logger.error("In Service layer: Csv file read operaion failed for {}",file.getFileName(),e);
+					
 					try {
-						
-						Files.move(file, 
-						Paths.get(errorDirectoryPath).resolve(file.getFileName()),
-						StandardCopyOption.REPLACE_EXISTING);
-						
+						moveFile(file, errorDirectoryPath);	
+						failureCount.incrementAndGet();
 						logger.info("File moved to error folder: {}",file.getFileName());
-						
-					} catch (IOException e) {
-						logger.error("Failed to move file to error folder: {}",file.getFileName(),e);
+					} catch (IOException e1) {
+						logger.error("Failed to move file to error folder: {}",file.getFileName(),e1);
 					}
-				}
+					
+				}catch (InventoryDAOException e) {
+					logger.error("Error code: {} Message: {}",e.getErrorCode(),MessageConstants.ERROR_SERVICE_SAVE_INVENTORY,e);
+					
+					try {
+						moveFile(file, errorDirectoryPath);
+						failureCount.incrementAndGet();
+						logger.info("File moved to error folder: {}",file.getFileName());
+					} catch (IOException e1) {
+						logger.error("Failed to move file to error folder: {}",file.getFileName(),e1);
+					}
 				
-			} catch (IOException e) {
-				logger.error("In Service layer: Csv file read operaion failed for {}",file.getFileName(),e);
-			} 
+				} finally {
+					completedCount.incrementAndGet();
+				}
+			};
+			
+			Thread thread = new Thread(runnable);
+			threads.add(thread);
+			thread.start();
 			
 		}
 		
-		if (totalNumberOfFilesToProcess==successfulFilesProcessed) 
-			logger.info("Inventory creation successful for all {} file(s)", successfulFilesProcessed);
-		else if (totalNumberOfFilesToProcess>successfulFilesProcessed) {
-			logger.info("Inventory creation success for {} files",successfulFilesProcessed);
-			logger.warn("Inventory creation failed for {} file(s)",totalNumberOfFilesToProcess-successfulFilesProcessed);;
+		waitForAllThreadsToComplete(threads);
+		
+		generateReportOfThreadsUsage(totalNumberOfFilesToProcess, threads);
+		
+		if (totalNumberOfFilesToProcess==successCount.get() && totalNumberOfFilesToProcess>0) 
+			logger.info("Inventory creation successful for all {} file(s)", successCount.get());
+		else if (totalNumberOfFilesToProcess>successCount.get() && successCount.get()>0) {
+			logger.info("Inventory creation success for {} files",successCount.get());
+			logger.warn("Inventory creation failed for {} file(s)",failureCount.get());
 		}
-		else if (successfulFilesProcessed==0)
+		else if (successCount.get()==0)
 			logger.warn("Inventory creation completely failed");
 		
 		logger.trace("Exiting createInventory()");
-		return List.of(totalNumberOfFilesToProcess,successfulFilesProcessed);
+		return List.of(totalNumberOfFilesToProcess,successCount.get());
 	}
 	
 	
@@ -160,4 +168,27 @@ public class InventoryService {
 		return inventory;
 	}
 	
+	private void waitForAllThreadsToComplete(List<Thread> threads) {
+		for (Thread thread : threads) {
+			try {
+				thread.join();
+			} catch (InterruptedException e) {
+				logger.warn("Warning: Interrupted while waiting for thread: {}",thread.getName(),e);
+			}
+		}
+	}
+	
+	private void moveFile(Path source,String destination) throws IOException {
+		Files.move(source,  Paths.get(destination).resolve(source.getFileName()),
+				StandardCopyOption.REPLACE_EXISTING);
+	}
+	
+	private void generateReportOfThreadsUsage(int totalNumberOfFilesToProcess,List<Thread> threads) {
+		logger.info("\n=== PROCESSING COMPLETE ===");
+		logger.info("Total files to process: {}",totalNumberOfFilesToProcess);
+		logger.info("Total threads created: {}",threads.size());
+		logger.info("Completed threads: {}",completedCount.get());
+		logger.info("Successfully processed threads: {}",successCount.get());
+		logger.info("Failed threads: {}",failureCount.get());
+	}
 }
