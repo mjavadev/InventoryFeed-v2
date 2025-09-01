@@ -31,10 +31,11 @@ public class InventoryService {
 		
 		List<Path> csvFiles = new ArrayList<>();
 		
-		int totalNumberOfFilesToProcess = csvFiles.size();
+		int totalNumberOfFilesToProcess = 0;
 		
 		try {
 			csvFiles = findCsvFiles(inputDirectoryPath);
+			totalNumberOfFilesToProcess = csvFiles.size();
 		} catch (IOException e) {
 			logger.error("Error reading input directory: {}", e.getMessage());
 			throw new InventoryServiceException(MessageConstants.ERROR_SERVICE_INPUT_DIRECTORY_READ, e, MessageConstants.ERROR_CODE_SERVICE_INPUT_DIRECTORY_READ);

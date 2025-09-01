@@ -1,739 +1,123 @@
-2025-09-01 08:43:09.149 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:23 - Entering processAllFiles()
-2025-09-01 08:43:09.155 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:30 - Entering createInventory()
-2025-09-01 08:43:09.158 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:110 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input1.csv
-2025-09-01 08:43:09.159 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:110 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input2.csv
-2025-09-01 08:43:09.159 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:110 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input3.csv
-2025-09-01 08:43:09.174 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 101
-2025-09-01 08:43:10.354 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 101
-2025-09-01 08:43:10.355 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 101
-2025-09-01 08:43:10.369 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 102
-2025-09-01 08:43:10.443 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 102
-2025-09-01 08:43:10.444 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 102
-2025-09-01 08:43:10.450 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 103
-2025-09-01 08:43:10.502 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 103
-2025-09-01 08:43:10.502 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 103
-2025-09-01 08:43:10.506 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:54 - Inventory created successfully: input1.csv
-2025-09-01 08:43:10.509 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:60 - File moved to processed folder: input1.csv
-2025-09-01 08:43:10.511 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 201
-2025-09-01 08:43:10.576 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 201
-2025-09-01 08:43:10.577 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 201
-2025-09-01 08:43:10.581 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 202
-2025-09-01 08:43:10.629 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 202
-2025-09-01 08:43:10.630 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 202
-2025-09-01 08:43:10.633 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 203
-2025-09-01 08:43:10.681 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 203
-2025-09-01 08:43:10.681 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 203
-2025-09-01 08:43:10.684 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:54 - Inventory created successfully: input2.csv
-2025-09-01 08:43:10.687 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:60 - File moved to processed folder: input2.csv
-2025-09-01 08:43:10.688 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 301
-2025-09-01 08:43:10.728 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 301
-2025-09-01 08:43:10.728 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 301
-2025-09-01 08:43:10.731 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 302
-2025-09-01 08:43:10.767 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 302
-2025-09-01 08:43:10.768 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 302
-2025-09-01 08:43:10.772 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 303
-2025-09-01 08:43:10.813 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 303
-2025-09-01 08:43:10.814 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 303
-2025-09-01 08:43:10.817 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:54 - Inventory created successfully: input3.csv
-2025-09-01 08:43:10.819 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:60 - File moved to processed folder: input3.csv
-2025-09-01 08:43:10.819 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:88 - Inventory creation successful: 3 file(s)
-2025-09-01 08:43:10.820 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:92 - Exiting createInventory()
-2025-09-01 08:43:10.820 [main] INFO  com.litmus7.inventoryfeed.controller.InventoryController:53 - Processed file(s) successfully: 3
-2025-09-01 08:43:23.348 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:23 - Entering processAllFiles()
-2025-09-01 08:43:23.350 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:30 - Entering createInventory()
-2025-09-01 08:43:23.351 [main] WARN  com.litmus7.inventoryfeed.service.InventoryService:90 - Inventory creation completely failed
-2025-09-01 08:43:23.351 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:92 - Exiting createInventory()
-2025-09-01 08:43:23.352 [main] WARN  com.litmus7.inventoryfeed.controller.InventoryController:57 - No files processed
-2025-09-01 08:43:23.352 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:59 - Exiting processAllFiles()
-2025-09-01 08:45:10.439 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:23 - Entering processAllFiles()
-2025-09-01 08:45:10.444 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:30 - Entering createInventory()
-2025-09-01 08:45:10.445 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:110 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input1.csv
-2025-09-01 08:45:10.445 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:110 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input2.csv
-2025-09-01 08:45:10.446 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:110 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input3.csv
-2025-09-01 08:45:10.449 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 101
-2025-09-01 08:45:11.658 [main] ERROR com.litmus7.inventoryfeed.dao.InventoryDAO:51 - Error Code: INV_DB_001 Message: Database error while saving inventory SKU: 101
-java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '101' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:49)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-2025-09-01 08:45:11.708 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:56 - All database changes rolled back successfully
-2025-09-01 08:45:11.711 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:81 - Error code: INV_DB_001 Message: In Service layer: Database failed to create inventory
-com.litmus7.inventoryfeed.exception.InventoryDAOException: Database error while saving inventory
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:62)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:49)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '101' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	... 3 more
-2025-09-01 08:45:11.716 [main] ERROR com.litmus7.inventoryfeed.controller.InventoryController:43 - Messages: Database error while saving inventory
-2025-09-01 09:15:08.556 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:23 - Entering processAllFiles()
-2025-09-01 09:15:08.562 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:30 - Entering createInventory()
-2025-09-01 09:15:08.565 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:117 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input1.csv
-2025-09-01 09:15:08.566 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:117 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input2.csv
-2025-09-01 09:15:08.566 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:117 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input3.csv
-2025-09-01 09:15:08.581 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 101
-2025-09-01 09:15:10.818 [main] ERROR com.litmus7.inventoryfeed.dao.InventoryDAO:51 - Error Code: INV_DB_001 Message: Database error while saving inventory SKU: 101
-java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '101' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-2025-09-01 09:15:10.825 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:56 - All database changes rolled back successfully
-2025-09-01 09:15:10.853 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:52 - Error code: INV_DB_001 Message: In Service layer: Database failed to create inventory
-com.litmus7.inventoryfeed.exception.InventoryDAOException: Database error while saving inventory
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:62)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '101' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	... 3 more
-2025-09-01 09:15:10.858 [main] ERROR com.litmus7.inventoryfeed.controller.InventoryController:43 - Messages: We couldn’t save the inventory details. Please try again.
-2025-09-01 09:27:39.733 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:23 - Entering processAllFiles()
-2025-09-01 09:27:39.739 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:30 - Entering createInventory()
-2025-09-01 09:27:39.745 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:117 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input1.csv
-2025-09-01 09:27:39.747 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:117 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input2.csv
-2025-09-01 09:27:39.749 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:117 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input3.csv
-2025-09-01 09:27:39.782 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 101
-2025-09-01 09:27:42.134 [main] ERROR com.litmus7.inventoryfeed.dao.InventoryDAO:51 - Error Code: INV_DB_001 Message: Database error while saving inventory SKU: 101
-java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '101' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-2025-09-01 09:27:42.148 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:56 - All database changes rolled back successfully
-2025-09-01 09:27:42.160 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:52 - Error code: INV_DB_001 Message: In Service layer: Database failed to create inventory
-com.litmus7.inventoryfeed.exception.InventoryDAOException: Database error while saving inventory
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:62)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '101' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	... 3 more
-2025-09-01 09:27:42.161 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 102
-2025-09-01 09:27:42.284 [main] ERROR com.litmus7.inventoryfeed.dao.InventoryDAO:51 - Error Code: INV_DB_001 Message: Database error while saving inventory SKU: 102
-java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '102' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-2025-09-01 09:27:42.287 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:56 - All database changes rolled back successfully
-2025-09-01 09:27:42.290 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:52 - Error code: INV_DB_001 Message: In Service layer: Database failed to create inventory
-com.litmus7.inventoryfeed.exception.InventoryDAOException: Database error while saving inventory
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:62)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '102' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	... 3 more
-2025-09-01 09:27:42.291 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 103
-2025-09-01 09:27:42.336 [main] ERROR com.litmus7.inventoryfeed.dao.InventoryDAO:51 - Error Code: INV_DB_001 Message: Database error while saving inventory SKU: 103
-java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '103' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-2025-09-01 09:27:42.340 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:56 - All database changes rolled back successfully
-2025-09-01 09:27:42.345 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:52 - Error code: INV_DB_001 Message: In Service layer: Database failed to create inventory
-com.litmus7.inventoryfeed.exception.InventoryDAOException: Database error while saving inventory
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:62)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '103' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	... 3 more
-2025-09-01 09:27:42.347 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:59 - Inventory created successfully: input1.csv
-2025-09-01 09:27:42.352 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:70 - File moved to processed folder: input1.csv
-2025-09-01 09:27:42.354 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 201
-2025-09-01 09:27:42.452 [main] ERROR com.litmus7.inventoryfeed.dao.InventoryDAO:51 - Error Code: INV_DB_001 Message: Database error while saving inventory SKU: 201
-java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '201' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-2025-09-01 09:27:42.454 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:56 - All database changes rolled back successfully
-2025-09-01 09:27:42.458 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:52 - Error code: INV_DB_001 Message: In Service layer: Database failed to create inventory
-com.litmus7.inventoryfeed.exception.InventoryDAOException: Database error while saving inventory
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:62)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '201' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	... 3 more
-2025-09-01 09:27:42.459 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 202
-2025-09-01 09:27:42.498 [main] ERROR com.litmus7.inventoryfeed.dao.InventoryDAO:51 - Error Code: INV_DB_001 Message: Database error while saving inventory SKU: 202
-java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '202' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-2025-09-01 09:27:42.501 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:56 - All database changes rolled back successfully
-2025-09-01 09:27:42.504 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:52 - Error code: INV_DB_001 Message: In Service layer: Database failed to create inventory
-com.litmus7.inventoryfeed.exception.InventoryDAOException: Database error while saving inventory
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:62)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '202' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	... 3 more
-2025-09-01 09:27:42.506 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 203
-2025-09-01 09:27:42.545 [main] ERROR com.litmus7.inventoryfeed.dao.InventoryDAO:51 - Error Code: INV_DB_001 Message: Database error while saving inventory SKU: 203
-java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '203' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-2025-09-01 09:27:42.547 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:56 - All database changes rolled back successfully
-2025-09-01 09:27:42.549 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:52 - Error code: INV_DB_001 Message: In Service layer: Database failed to create inventory
-com.litmus7.inventoryfeed.exception.InventoryDAOException: Database error while saving inventory
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:62)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '203' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	... 3 more
-2025-09-01 09:27:42.550 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:59 - Inventory created successfully: input2.csv
-2025-09-01 09:27:42.552 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:70 - File moved to processed folder: input2.csv
-2025-09-01 09:27:42.552 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 301
-2025-09-01 09:27:42.591 [main] ERROR com.litmus7.inventoryfeed.dao.InventoryDAO:51 - Error Code: INV_DB_001 Message: Database error while saving inventory SKU: 301
-java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '301' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-2025-09-01 09:27:42.594 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:56 - All database changes rolled back successfully
-2025-09-01 09:27:42.598 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:52 - Error code: INV_DB_001 Message: In Service layer: Database failed to create inventory
-com.litmus7.inventoryfeed.exception.InventoryDAOException: Database error while saving inventory
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:62)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '301' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	... 3 more
-2025-09-01 09:27:42.599 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 302
-2025-09-01 09:27:42.632 [main] ERROR com.litmus7.inventoryfeed.dao.InventoryDAO:51 - Error Code: INV_DB_001 Message: Database error while saving inventory SKU: 302
-java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '302' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-2025-09-01 09:27:42.634 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:56 - All database changes rolled back successfully
-2025-09-01 09:27:42.636 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:52 - Error code: INV_DB_001 Message: In Service layer: Database failed to create inventory
-com.litmus7.inventoryfeed.exception.InventoryDAOException: Database error while saving inventory
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:62)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '302' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	... 3 more
-2025-09-01 09:27:42.637 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 303
-2025-09-01 09:27:42.668 [main] ERROR com.litmus7.inventoryfeed.dao.InventoryDAO:51 - Error Code: INV_DB_001 Message: Database error while saving inventory SKU: 303
-java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '303' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-2025-09-01 09:27:42.670 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:56 - All database changes rolled back successfully
-2025-09-01 09:27:42.674 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:52 - Error code: INV_DB_001 Message: In Service layer: Database failed to create inventory
-com.litmus7.inventoryfeed.exception.InventoryDAOException: Database error while saving inventory
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:62)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:50)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '303' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	... 3 more
-2025-09-01 09:27:42.674 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:59 - Inventory created successfully: input3.csv
-2025-09-01 09:27:42.676 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:70 - File moved to processed folder: input3.csv
-2025-09-01 09:27:42.677 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:95 - Inventory creation successful: 3 file(s)
-2025-09-01 09:27:42.677 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:99 - Exiting createInventory()
-2025-09-01 09:27:42.677 [main] INFO  com.litmus7.inventoryfeed.controller.InventoryController:53 - Processed file(s) successfully: 3
-2025-09-01 09:44:48.081 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:23 - Entering processAllFiles()
-2025-09-01 09:44:48.089 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:30 - Entering createInventory()
-2025-09-01 09:44:48.093 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:127 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input1.csv
-2025-09-01 09:44:48.095 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:127 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input2.csv
-2025-09-01 09:44:48.096 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:127 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input3.csv
-2025-09-01 09:44:48.117 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 101
-2025-09-01 09:44:50.403 [main] ERROR com.litmus7.inventoryfeed.dao.InventoryDAO:51 - Error Code: INV_DB_001 Message: Database error while saving inventory SKU: 101
-java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '101' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:55)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-2025-09-01 09:44:50.411 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:56 - All database changes rolled back successfully
-2025-09-01 09:44:50.423 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:57 - Error code: INV_DB_001 Message: In Service layer: Database failed to create inventory
-com.litmus7.inventoryfeed.exception.InventoryDAOException: Database error while saving inventory
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:62)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:55)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '101' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	... 3 more
-2025-09-01 09:44:50.435 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:81 - Inventory creation failed for file: input1.csv
-2025-09-01 09:44:50.446 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:88 - File moved to error folder: input1.csv
-2025-09-01 09:44:50.448 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 201
-2025-09-01 09:44:50.530 [main] ERROR com.litmus7.inventoryfeed.dao.InventoryDAO:51 - Error Code: INV_DB_001 Message: Database error while saving inventory SKU: 201
-java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '201' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:55)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-2025-09-01 09:44:50.533 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:56 - All database changes rolled back successfully
-2025-09-01 09:44:50.537 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:57 - Error code: INV_DB_001 Message: In Service layer: Database failed to create inventory
-com.litmus7.inventoryfeed.exception.InventoryDAOException: Database error while saving inventory
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:62)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:55)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '201' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	... 3 more
-2025-09-01 09:44:50.539 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:81 - Inventory creation failed for file: input2.csv
-2025-09-01 09:44:50.541 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:88 - File moved to error folder: input2.csv
-2025-09-01 09:44:50.544 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 301
-2025-09-01 09:44:50.593 [main] ERROR com.litmus7.inventoryfeed.dao.InventoryDAO:51 - Error Code: INV_DB_001 Message: Database error while saving inventory SKU: 301
-java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '301' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:55)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-2025-09-01 09:44:50.597 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:56 - All database changes rolled back successfully
-2025-09-01 09:44:50.600 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:57 - Error code: INV_DB_001 Message: In Service layer: Database failed to create inventory
-com.litmus7.inventoryfeed.exception.InventoryDAOException: Database error while saving inventory
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:62)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:55)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:35)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '301' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	... 3 more
-2025-09-01 09:44:50.601 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:81 - Inventory creation failed for file: input3.csv
-2025-09-01 09:44:50.603 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:88 - File moved to error folder: input3.csv
-2025-09-01 09:44:50.603 [main] WARN  com.litmus7.inventoryfeed.service.InventoryService:107 - Inventory creation completely failed
-2025-09-01 09:44:50.604 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:109 - Exiting createInventory()
-2025-09-01 09:44:50.604 [main] WARN  com.litmus7.inventoryfeed.controller.InventoryController:57 - No files processed
-2025-09-01 09:44:50.605 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:59 - Exiting processAllFiles()
-2025-09-01 10:01:08.309 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:23 - Entering processAllFiles()
-2025-09-01 10:01:08.316 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:30 - Entering createInventory()
-2025-09-01 10:01:08.321 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:120 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input1.csv
-2025-09-01 10:01:08.322 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:120 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input2.csv
-2025-09-01 10:01:08.323 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:120 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input3.csv
-2025-09-01 10:01:08.351 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 
-2025-09-01 10:01:09.497 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 
-2025-09-01 10:01:09.498 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 
-2025-09-01 10:01:09.512 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 102
-2025-09-01 10:01:10.733 [main] ERROR com.litmus7.inventoryfeed.dao.InventoryDAO:51 - Error Code: INV_DB_001 Message: Database error while saving inventory SKU: 102
-java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '102' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:53)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:36)
-2025-09-01 10:01:10.742 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:56 - All database changes rolled back successfully
-2025-09-01 10:01:10.747 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:55 - Error code: INV_DB_001 Message: In Service layer: Database failed to create inventory
-com.litmus7.inventoryfeed.exception.InventoryDAOException: Database error while saving inventory
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:62)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:53)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:36)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '102' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	... 3 more
-2025-09-01 10:01:10.748 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:77 - Inventory creation failed for file: input1.csv
-2025-09-01 10:01:10.754 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:84 - File moved to error folder: input1.csv
-2025-09-01 10:01:10.756 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 201
-2025-09-01 10:01:10.811 [main] ERROR com.litmus7.inventoryfeed.dao.InventoryDAO:51 - Error Code: INV_DB_001 Message: Database error while saving inventory SKU: 201
-java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '201' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:53)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:36)
-2025-09-01 10:01:10.815 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:56 - All database changes rolled back successfully
-2025-09-01 10:01:10.818 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:55 - Error code: INV_DB_001 Message: In Service layer: Database failed to create inventory
-com.litmus7.inventoryfeed.exception.InventoryDAOException: Database error while saving inventory
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:62)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:53)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:36)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '201' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	... 3 more
-2025-09-01 10:01:10.819 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:77 - Inventory creation failed for file: input2.csv
-2025-09-01 10:01:10.823 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:84 - File moved to error folder: input2.csv
-2025-09-01 10:01:10.824 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 301
-2025-09-01 10:01:10.871 [main] ERROR com.litmus7.inventoryfeed.dao.InventoryDAO:51 - Error Code: INV_DB_001 Message: Database error while saving inventory SKU: 301
-java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '301' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:53)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:36)
-2025-09-01 10:01:10.874 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:56 - All database changes rolled back successfully
-2025-09-01 10:01:10.878 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:55 - Error code: INV_DB_001 Message: In Service layer: Database failed to create inventory
-com.litmus7.inventoryfeed.exception.InventoryDAOException: Database error while saving inventory
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:62)
-	at com.litmus7.inventoryfeed.service.InventoryService.createInventory(InventoryService.java:53)
-	at com.litmus7.inventoryfeed.controller.InventoryController.processAllFiles(InventoryController.java:41)
-	at com.litmus7.inventoryfeed.app.InventoryFeedApp.main(InventoryFeedApp.java:36)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '301' for key 'inventory.PRIMARY'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084)
-	at com.litmus7.inventoryfeed.dao.InventoryDAO.saveInventory(InventoryDAO.java:39)
-	... 3 more
-2025-09-01 10:01:10.879 [main] ERROR com.litmus7.inventoryfeed.service.InventoryService:77 - Inventory creation failed for file: input3.csv
-2025-09-01 10:01:10.883 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:84 - File moved to error folder: input3.csv
-2025-09-01 10:01:10.883 [main] WARN  com.litmus7.inventoryfeed.service.InventoryService:100 - Inventory creation completely failed
-2025-09-01 10:01:10.884 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:102 - Exiting createInventory()
-2025-09-01 10:01:10.884 [main] WARN  com.litmus7.inventoryfeed.controller.InventoryController:57 - No files processed
-2025-09-01 10:01:10.884 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:59 - Exiting processAllFiles()
-2025-09-01 10:02:27.535 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:23 - Entering processAllFiles()
-2025-09-01 10:02:27.540 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:30 - Entering createInventory()
-2025-09-01 10:02:27.544 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:120 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input1.csv
-2025-09-01 10:02:27.544 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:120 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input2.csv
-2025-09-01 10:02:27.545 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:120 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input3.csv
-2025-09-01 10:02:27.560 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 
-2025-09-01 10:02:28.712 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 
-2025-09-01 10:02:28.713 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 
-2025-09-01 10:02:28.726 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 102
-2025-09-01 10:02:28.816 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 102
-2025-09-01 10:02:28.818 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 102
-2025-09-01 10:02:28.822 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 103
-2025-09-01 10:02:28.883 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 103
-2025-09-01 10:02:28.884 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 103
-2025-09-01 10:02:28.888 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:64 - Inventory created successfully for file: input1.csv
-2025-09-01 10:02:28.891 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:70 - File moved to processed folder: input1.csv
-2025-09-01 10:02:28.894 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 201
-2025-09-01 10:02:28.957 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 201
-2025-09-01 10:02:28.958 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 201
-2025-09-01 10:02:28.961 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 202
-2025-09-01 10:02:29.010 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 202
-2025-09-01 10:02:29.011 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 202
-2025-09-01 10:02:29.015 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 203
-2025-09-01 10:02:29.060 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 203
-2025-09-01 10:02:29.061 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 203
-2025-09-01 10:02:29.064 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:64 - Inventory created successfully for file: input2.csv
-2025-09-01 10:02:29.066 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:70 - File moved to processed folder: input2.csv
-2025-09-01 10:02:29.067 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 301
-2025-09-01 10:02:29.111 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 301
-2025-09-01 10:02:29.111 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 301
-2025-09-01 10:02:29.114 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 302
-2025-09-01 10:02:29.153 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 302
-2025-09-01 10:02:29.154 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 302
-2025-09-01 10:02:29.157 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 303
-2025-09-01 10:02:29.196 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 303
-2025-09-01 10:02:29.197 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 303
-2025-09-01 10:02:29.199 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:64 - Inventory created successfully for file: input3.csv
-2025-09-01 10:02:29.201 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:70 - File moved to processed folder: input3.csv
-2025-09-01 10:02:29.202 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:98 - Inventory creation successful for 3 file(s)
-2025-09-01 10:02:29.203 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:102 - Exiting createInventory()
-2025-09-01 10:02:29.203 [main] INFO  com.litmus7.inventoryfeed.controller.InventoryController:53 - Processed file(s) successfully: 3
-2025-09-01 10:04:21.007 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:23 - Entering processAllFiles()
-2025-09-01 10:04:21.013 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:30 - Entering createInventory()
-2025-09-01 10:04:21.016 [main] WARN  com.litmus7.inventoryfeed.service.InventoryService:100 - Inventory creation completely failed
-2025-09-01 10:04:21.016 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:102 - Exiting createInventory()
-2025-09-01 10:04:21.017 [main] WARN  com.litmus7.inventoryfeed.controller.InventoryController:57 - No files processed
-2025-09-01 10:04:21.017 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:59 - Exiting processAllFiles()
-2025-09-01 10:04:56.069 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:23 - Entering processAllFiles()
-2025-09-01 10:04:56.071 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:30 - Entering createInventory()
-2025-09-01 10:04:56.074 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:120 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input1.csv
-2025-09-01 10:04:56.074 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:120 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input2.csv
-2025-09-01 10:04:56.075 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:120 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input3.csv
-2025-09-01 10:04:56.092 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: A
-2025-09-01 10:04:57.200 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: A
-2025-09-01 10:04:57.201 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: A
-2025-09-01 10:04:57.216 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 102
-2025-09-01 10:04:57.298 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 102
-2025-09-01 10:04:57.299 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 102
-2025-09-01 10:04:57.302 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 103
-2025-09-01 10:04:57.348 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 103
-2025-09-01 10:04:57.348 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 103
-2025-09-01 10:04:57.352 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:64 - Inventory created successfully for file: input1.csv
-2025-09-01 10:04:57.355 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:70 - File moved to processed folder: input1.csv
-2025-09-01 10:04:57.357 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 201
-2025-09-01 10:04:57.402 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 201
-2025-09-01 10:04:57.402 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 201
-2025-09-01 10:04:57.407 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 202
-2025-09-01 10:04:57.449 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 202
-2025-09-01 10:04:57.450 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 202
-2025-09-01 10:04:57.453 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 203
-2025-09-01 10:04:57.491 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 203
-2025-09-01 10:04:57.492 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 203
-2025-09-01 10:04:57.494 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:64 - Inventory created successfully for file: input2.csv
-2025-09-01 10:04:57.496 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:70 - File moved to processed folder: input2.csv
-2025-09-01 10:04:57.498 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 301
-2025-09-01 10:04:57.536 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 301
-2025-09-01 10:04:57.537 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 301
-2025-09-01 10:04:57.539 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 302
-2025-09-01 10:04:57.571 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 302
-2025-09-01 10:04:57.572 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 302
-2025-09-01 10:04:57.575 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 303
-2025-09-01 10:04:57.612 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 303
-2025-09-01 10:04:57.612 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 303
-2025-09-01 10:04:57.615 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:64 - Inventory created successfully for file: input3.csv
-2025-09-01 10:04:57.616 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:70 - File moved to processed folder: input3.csv
-2025-09-01 10:04:57.616 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:98 - Inventory creation successful for 3 file(s)
-2025-09-01 10:04:57.617 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:102 - Exiting createInventory()
-2025-09-01 10:04:57.617 [main] INFO  com.litmus7.inventoryfeed.controller.InventoryController:53 - Processed file(s) successfully: 3
-2025-09-01 10:07:17.389 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:23 - Entering processAllFiles()
-2025-09-01 10:07:17.394 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:30 - Entering createInventory()
-2025-09-01 10:07:17.398 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:120 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input1.csv
-2025-09-01 10:07:17.398 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:120 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input2.csv
-2025-09-01 10:07:17.399 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:120 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input3.csv
-2025-09-01 10:07:17.414 [main] ERROR com.litmus7.inventoryfeed.controller.InventoryController:46 - Messages: Something went wrong. Please try again later.
-2025-09-01 10:07:38.441 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:23 - Entering processAllFiles()
-2025-09-01 10:07:38.447 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:30 - Entering createInventory()
-2025-09-01 10:07:38.450 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:120 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input1.csv
-2025-09-01 10:07:38.451 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:120 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input2.csv
-2025-09-01 10:07:38.451 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:120 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input3.csv
-2025-09-01 10:07:38.467 [main] ERROR com.litmus7.inventoryfeed.controller.InventoryController:46 - Messages: Something went wrong. Please try again later.
-2025-09-01 10:08:12.349 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:23 - Entering processAllFiles()
-2025-09-01 10:08:12.353 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:30 - Entering createInventory()
-2025-09-01 10:08:12.357 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:120 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input1.csv
-2025-09-01 10:08:12.358 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:120 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input2.csv
-2025-09-01 10:08:12.358 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:120 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input3.csv
-2025-09-01 10:08:12.372 [main] ERROR com.litmus7.inventoryfeed.controller.InventoryController:46 - Messages: Something went wrong. Please try again later.
+2025-09-01 14:22:04.805 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:25 - Entering processAllFiles()
+2025-09-01 14:22:04.810 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:30 - Entering createInventory()
+2025-09-01 14:22:04.814 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:126 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input1.csv
+2025-09-01 14:22:04.814 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:126 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input2.csv
+2025-09-01 14:22:04.815 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:126 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input3.csv
+2025-09-01 14:22:04.829 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 101
+2025-09-01 14:22:06.152 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 101
+2025-09-01 14:22:06.153 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 101
+2025-09-01 14:22:06.167 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 102
+2025-09-01 14:22:06.233 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 102
+2025-09-01 14:22:06.233 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 102
+2025-09-01 14:22:06.237 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 103
+2025-09-01 14:22:06.287 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 103
+2025-09-01 14:22:06.287 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 103
+2025-09-01 14:22:06.291 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:66 - Inventory created successfully for file: input1.csv
+2025-09-01 14:22:06.295 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:72 - File moved to processed folder: input1.csv
+2025-09-01 14:22:06.297 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 201
+2025-09-01 14:22:06.350 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 201
+2025-09-01 14:22:06.350 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 201
+2025-09-01 14:22:06.354 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 202
+2025-09-01 14:22:06.395 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 202
+2025-09-01 14:22:06.396 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 202
+2025-09-01 14:22:06.398 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 203
+2025-09-01 14:22:06.443 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 203
+2025-09-01 14:22:06.444 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 203
+2025-09-01 14:22:06.448 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:66 - Inventory created successfully for file: input2.csv
+2025-09-01 14:22:06.451 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:72 - File moved to processed folder: input2.csv
+2025-09-01 14:22:06.452 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 301
+2025-09-01 14:22:06.494 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 301
+2025-09-01 14:22:06.495 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 301
+2025-09-01 14:22:06.499 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 302
+2025-09-01 14:22:06.532 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 302
+2025-09-01 14:22:06.533 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 302
+2025-09-01 14:22:06.536 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 303
+2025-09-01 14:22:06.569 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 303
+2025-09-01 14:22:06.570 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 303
+2025-09-01 14:22:06.573 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:66 - Inventory created successfully for file: input3.csv
+2025-09-01 14:22:06.574 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:72 - File moved to processed folder: input3.csv
+2025-09-01 14:22:06.575 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:108 - Exiting createInventory()
+2025-09-01 14:22:06.576 [main] WARN  com.litmus7.inventoryfeed.controller.InventoryController:67 - No files processed
+2025-09-01 14:22:06.576 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:68 - Exiting processAllFiles()
+2025-09-01 14:24:26.968 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:25 - Entering processAllFiles()
+2025-09-01 14:25:06.854 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:30 - Entering createInventory()
+2025-09-01 14:25:08.890 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:126 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input1.csv
+2025-09-01 14:25:08.892 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:126 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input2.csv
+2025-09-01 14:25:08.895 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:126 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input3.csv
+2025-09-01 14:25:15.135 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 101
+2025-09-01 14:25:21.921 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 101
+2025-09-01 14:25:21.929 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 101
+2025-09-01 14:25:21.956 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 102
+2025-09-01 14:25:22.303 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 102
+2025-09-01 14:25:22.305 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 102
+2025-09-01 14:25:22.318 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 103
+2025-09-01 14:25:22.661 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 103
+2025-09-01 14:25:22.663 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 103
+2025-09-01 14:25:22.671 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:66 - Inventory created successfully for file: input1.csv
+2025-09-01 14:25:22.678 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:72 - File moved to processed folder: input1.csv
+2025-09-01 14:25:30.115 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 201
+2025-09-01 14:25:30.598 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 201
+2025-09-01 14:25:30.600 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 201
+2025-09-01 14:25:30.608 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 202
+2025-09-01 14:25:31.010 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 202
+2025-09-01 14:25:31.013 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 202
+2025-09-01 14:25:31.018 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 203
+2025-09-01 14:25:31.366 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 203
+2025-09-01 14:25:31.367 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 203
+2025-09-01 14:25:31.379 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:66 - Inventory created successfully for file: input2.csv
+2025-09-01 14:25:31.384 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:72 - File moved to processed folder: input2.csv
+2025-09-01 14:25:36.245 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 301
+2025-09-01 14:25:36.855 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 301
+2025-09-01 14:25:36.857 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 301
+2025-09-01 14:25:36.866 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 302
+2025-09-01 14:25:37.282 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 302
+2025-09-01 14:25:37.283 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 302
+2025-09-01 14:25:37.291 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 303
+2025-09-01 14:25:37.637 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 303
+2025-09-01 14:25:37.639 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 303
+2025-09-01 14:25:37.650 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:66 - Inventory created successfully for file: input3.csv
+2025-09-01 14:25:37.656 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:72 - File moved to processed folder: input3.csv
+2025-09-01 14:25:37.658 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:108 - Exiting createInventory()
+2025-09-01 14:27:55.683 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:25 - Entering processAllFiles()
+2025-09-01 14:28:07.407 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:30 - Entering createInventory()
+2025-09-01 14:29:14.879 [main] TRACE com.litmus7.inventoryfeed.controller.InventoryController:25 - Entering processAllFiles()
+2025-09-01 14:29:14.884 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:30 - Entering createInventory()
+2025-09-01 14:29:14.887 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:127 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input1.csv
+2025-09-01 14:29:14.888 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:127 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input2.csv
+2025-09-01 14:29:14.888 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:127 - In findCsvFiles(): Csv file found: C:\Users\HP\eclipse-workspace\InventoryFeed-v1\input\input3.csv
+2025-09-01 14:29:14.903 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 101
+2025-09-01 14:29:16.054 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 101
+2025-09-01 14:29:16.055 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 101
+2025-09-01 14:29:16.071 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 102
+2025-09-01 14:29:16.176 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 102
+2025-09-01 14:29:16.177 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 102
+2025-09-01 14:29:16.181 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 103
+2025-09-01 14:29:16.224 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 103
+2025-09-01 14:29:16.225 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 103
+2025-09-01 14:29:16.227 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:67 - Inventory created successfully for file: input1.csv
+2025-09-01 14:29:16.230 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:73 - File moved to processed folder: input1.csv
+2025-09-01 14:29:16.232 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 201
+2025-09-01 14:29:16.286 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 201
+2025-09-01 14:29:16.287 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 201
+2025-09-01 14:29:16.293 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 202
+2025-09-01 14:29:16.337 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 202
+2025-09-01 14:29:16.338 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 202
+2025-09-01 14:29:16.340 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 203
+2025-09-01 14:29:16.382 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 203
+2025-09-01 14:29:16.383 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 203
+2025-09-01 14:29:16.385 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:67 - Inventory created successfully for file: input2.csv
+2025-09-01 14:29:16.387 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:73 - File moved to processed folder: input2.csv
+2025-09-01 14:29:16.389 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 301
+2025-09-01 14:29:16.426 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 301
+2025-09-01 14:29:16.426 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 301
+2025-09-01 14:29:16.430 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 302
+2025-09-01 14:29:16.465 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 302
+2025-09-01 14:29:16.466 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 302
+2025-09-01 14:29:16.469 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:22 - Entering saveInventory() for SKU: 303
+2025-09-01 14:29:16.503 [main] INFO  com.litmus7.inventoryfeed.dao.InventoryDAO:43 - Inserted 1 row inventory successfully for SKU: 303
+2025-09-01 14:29:16.504 [main] TRACE com.litmus7.inventoryfeed.dao.InventoryDAO:45 - Exiting saveInventory() for SKU: 303
+2025-09-01 14:29:16.506 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:67 - Inventory created successfully for file: input3.csv
+2025-09-01 14:29:16.508 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:73 - File moved to processed folder: input3.csv
+2025-09-01 14:29:16.509 [main] INFO  com.litmus7.inventoryfeed.service.InventoryService:101 - Inventory creation successful for all 3 file(s)
+2025-09-01 14:29:16.509 [main] TRACE com.litmus7.inventoryfeed.service.InventoryService:109 - Exiting createInventory()
+2025-09-01 14:29:16.510 [main] INFO  com.litmus7.inventoryfeed.controller.InventoryController:58 - All file(s) processed successfully

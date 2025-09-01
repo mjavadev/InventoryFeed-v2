@@ -63,14 +63,12 @@ public class InventoryController {
 			logger.warn(MessageConstants.ERROR_FILE_PROCESSED,totalFilesCount-successfulFilesProcessedCount);
 			return new Response<>(true, String.format(MessageConstants.FILE_PARTIAL_PROCESSED_SUCCESSFULLY_AND_PARTIAL_FAILED,successfulFilesProcessedCount,totalFilesCount-successfulFilesProcessedCount));
 		}
-		else if (successfulFilesProcessedCount==0) {
+		else {
 			logger.warn("No files processed");
+			logger.trace("Exiting processAllFiles()");
 			return new Response<>(false,MessageConstants.ERROR_NO_FILES_PROCESSED);
 		}
 		
-		logger.trace("Exiting processAllFiles()");
-		
-		return new Response<>(false,"Failed to process any files");
 	}
 	
 }
